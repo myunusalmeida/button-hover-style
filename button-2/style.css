@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* background: #eee; */
+}
+
+.btn {
+    color: #222;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 24px;
+    position: relative;
+    padding: 10px 50px 10px 20px;
+    transition: all 0.3s;
+    transform: scale(3);
+}
+
+.btn .bg {
+    background: #222;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    padding-right: 20px;
+    color: #fff;
+}
+
+.btn:hover .bg {
+    height: 100%;
+    width: 100%;
+    transform: translate(0, -50%);
+}
+
+.btn .bg:before,
+.btn .bg:after {
+    content: '';
+    height: 2px;
+    width: 10px;
+    background: #222;
+    position: absolute;
+    right: -2px;
+    transition: all 0.3s;
+}
+
+.btn .bg:before {
+    bottom: 3px;
+    transform: rotate(45deg);
+}
+
+.btn .bg:after {
+    top: 3px;
+    transform: rotate(-45deg);
+}
+
+.btn:hover .bg:before,
+.btn:hover .bg:after {
+    right: 0;
+}
+
+.btn:hover .bg:before {
+    bottom: 6px;
+}
+
+.btn:hover .bg:after {
+    top: 6px;
+}

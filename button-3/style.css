@@ -1,0 +1,50 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: #111;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #ECECEC;
+}
+
+.container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 44px;
+    font-size: 36px;
+    position: relative;
+}
+
+.btn::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn .btn-text {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.btn:hover::before {
+    /* background: black; */
+    width: 100%;
+}
